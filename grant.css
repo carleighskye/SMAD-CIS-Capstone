@@ -34,11 +34,61 @@
   border-radius: 6px; 
 }
 
+/* hero overlay content */
+.hero-wrap {
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0; /* cover the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center the content */
+  align-items: flex-start; /* left-align horizontally */
+  text-align: left;
+  padding: 1rem 1rem 1rem 2rem; /* extra left padding for breathing room */
+  pointer-events: auto; /* allow clicks on overlay elements */
+  z-index: 2; /* sit above the image */
+}
+
+.hero-title {
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  margin: 0 0 0.75rem 0;
+}
+
+.hero-cta {
+  /* prefer Bootstrap classes; keep a minimal override so it matches theme */
+  pointer-events: auto;
+  text-decoration: none;
+  display: inline-block; /* don't stretch to full width */
+  width: auto;
+  padding: 0.5rem 1rem;
+  margin: 0; /* left-aligned with the text */
+  align-self: flex-start; /* ensure the button sits to the left */
+}
+
+.hero-cta.btn-primary {
+  background-color: #0d6efd; /* Bootstrap primary */
+  border-color: #0d6efd;
+}
+
+.hero-cta.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
 /* Slightly taller hero on larger screens */
 @media (min-width: 992px) {
   #hero img {
     height: 48vh;
   }
+}
+
+@media (min-width: 992px) {
+  .hero-overlay { padding-left: 4rem; }
 }
 
 @media (max-width: 575px) {
