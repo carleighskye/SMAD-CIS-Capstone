@@ -96,3 +96,25 @@
     height: 28vh;
   }
 }
+
+/* Square image utility: maintain square aspect ratio, crop-to-fill without distortion */
+.square-img {
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  /* shift focal point slightly right so both people are visible */
+  object-position: 0% 50%;
+  border-radius: 6px;
+  display: block;
+}
+
+.midtext {
+    max-width: 80%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+#Offerings {
+    max-width: 80%;
+    margin: 1.5rem auto;
+    text-align: left;
+}
