@@ -1,4 +1,18 @@
+.navbar-brand {
+  /* keep brand contents (logo + text) vertically centered without resizing the image */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .navbar-brand img {
-  height: 44px;
+  /* do not force a height so the original image size is preserved */
+  height: 75px;
   width: auto;
+  vertical-align: middle;
+}
+
+/* override Bootstrap utility if present so it doesn't push the image up */
+.navbar-brand img.align-text-top {
+  vertical-align: middle;
 }
